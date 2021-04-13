@@ -1,0 +1,31 @@
+
+import java.io.*;
+
+
+public class CrearArchivoTextoYEscribirConBucleSerializado {
+
+	public static void main(String[] args) throws IOException {
+		
+
+		// Creamos un objeto de la clase File con el nombre del archivo en mi caso es piramite
+	File f=new File("piramite.txt");	
+  //Añadimos el metodo para crear el archivo de texto
+	f.createNewFile();
+//Creamos un objeto de la clase BufferedWriter y añadimos el nombre que hemos creado en la variable f
+BufferedWriter bw=new BufferedWriter(new FileWriter("piramite.txt"));
+	
+	//al ser un Array se utiliza el bucle while para que imprima los datos oportunos	
+  //En este caso es un contador muy basico hasta 10 Para añadirlo despues al metodo Write
+for (int i=0;i<10;i++)	
+{
+
+//Aqui se le graba el texto que queramos y lo conncatenamos con el temporizador y conlo que queramos añadir en los parentesis.
+	bw.write("File " +i+ "");
+}
+	bw.close();
+	//Cerramos el archivo.
+	//USAR TRY CATCH PARA HACER EL CODIGO MAS LIMPIO Y SEGURO
+
+	}
+
+}

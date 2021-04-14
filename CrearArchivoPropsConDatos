@@ -1,0 +1,23 @@
+//Escribir ficheros de configuracion
+
+
+
+Properties  f=new Properties();
+
+
+try{
+
+
+usuario f.setProperties("user", miusuario);
+password f.setProperties("password", micontraseña);
+servidor f.setProperties("server", server);
+puert f.setProperties("port" , el puerto);
+
+try{
+f.store(new FileOutputStream("configuracion.props"),
+
+}catch(FileNotFoundException io){
+io.printStackTrace();
+}catch (IOException ioe){
+ioe.printStackTrace();
+}
